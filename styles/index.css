@@ -1,0 +1,158 @@
+.hola h1 {
+    padding: 10px 0px;
+}
+
+.hola p {
+    padding: 10px 0px;
+    text-align: justify;
+}
+
+#imgHola {
+    max-width: 70%;
+}
+
+.skills {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Barras de progreso*/
+.progress {
+    background: #e2fadb;
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 25px;
+    width: 250px;
+}
+
+.progress1 {
+    margin-bottom: 20px;
+}
+
+.progress-value {
+    box-shadow: 0 10px 40px -10px rgb(0, 0, 0);
+    border-radius: 100px;
+    background: #9bc4cba6;
+    height: 15px;
+    width: 0;
+}
+
+@keyframes load1 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 68%;
+    }
+}
+
+@keyframes load1 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes load2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes load3 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes load4 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+.val1 {
+    animation: load1 3s normal forwards;
+}
+
+.val2 {
+    animation: load2 3s normal forwards;
+}
+
+.val3 {
+    animation: load3 3s normal forwards;
+}
+
+.val4 {
+    animation: load4 3s normal forwards;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .skills {
+        margin: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .progress {
+        height: 35px;
+        width: 250px;
+        margin-bottom: 40px;
+    }
+
+    .progress-value {
+        height: 25px;
+    }
+    .progress1 {
+        margin-bottom: 30px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .progress {
+        height: 35px;
+        width: 250px;
+    }
+
+    .progress-value {
+        height: 25px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contacto</title>
+        <link rel="stylesheet" href="../styles/nav.css" />
+        <link rel="stylesheet" href="../styles/footer.css" />
+        <link rel="stylesheet" href="../styles/contact.css" />
+        <script src="../JS/navbar.js" defer></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div id="menu">
+                <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li>
+                            <a class="menu" href="../index.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="menu" href="contact.html">Contacto</a>
+                        </li>
+                        <li>
+                            <a
+                                class="menu"
+                                href="https://github.com/mangelesc"
+                                target="_blank"
+                                >Github</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="menu"
+                                href="https://www.linkedin.com/in/mariaangelescordoba/"
+                                target="_blank"
+                                >LinkedIn</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bg" id="menu-bg"></div>
+            <img class="logo" src="../imgs/logo.jpg" alt="Logo" />
+        </header>
+
+
+
+        <main">
+            <div class="container">
+                <h2 class="tittle">Contacta conmigo:</h2>
+
+                <form action="./thanks.html" method="post">
+                    <div class="section-inputs">
+                        <label for="name">
+                            <span class="labelSpan">Nombre</span>
+                            <input
+                                class="labelInput"
+                                id="name"
+                                name="name"
+                                placeholder="Nombre"
+                                type="text"
+                                required
+                            />
+                        </label>
+                        <label for="lastname">
+                            <span class="labelSpan">Apellidos</span>
+                            <input
+                                class="labelInput"
+                                id="lastname"
+                                name="lastname"
+                                placeholder="Apellidos"
+                                type="text"
+                                required
+                            />
+                        </label>
+                    </div>
+                    <label for="email">
+                        <span class="labelSpan">Email </span>
+                        <input 
+                        class="labelInput"
+                        id="email" 
+                        name="email" 
+                        placeholder="hola@angeles.com"
+                        type="email"/>
+                    </label>
+                    <label for="phone">
+                        <span class="labelSpan">Teléfono </span>
+                        <input class="labelInput"
+                            id="phone"
+                            name="phone"
+                            placeholder="Teléfono"
+                            type="tel"
+                            required
+                        />
+                    </label>
+
+                    <label for="user">
+                        <span class="labelSpan">Github username</span>
+                        <input 
+                            class="labelInput" 
+                            id="comment" 
+                            placeholder="@user"
+                            type="text"
+                            pattern = "^@[a-zA-Z0-9_]{1,30}">
+                            
+                        </input>
+                    </label>
+
+                    <label for="comment">
+                        <span class="labelSpan">Mensaje</span>
+                        <textarea 
+                            class="labelInput" 
+                            id="comment" 
+                            placeholder="Escribe tu comentario aquí"
+                            type="text"
+                            maxlength="180"
+                            required>
+                        </textarea>
+                    </label>
+                    
+                    <label class="label">
+                        <span class="labelSpan">¿Cómo me conociste?</span>
+                            <div class="radioButton">
+                                <label for="uni">
+                                <input 
+                                    type="checkbox" 
+                                    name="meet" 
+                                    id="uni" 
+                                    value="uni" />
+                                Universidad</label>
+                            </div>
+                            <div class="radioButton">
+                                <label for="KeepCoding">
+                                <input
+                                    type="checkbox"
+                                    name="meet"
+                                    id="KeepCoding"
+                                    value="KeepCoding"
+                                /> KeepCoding</label>
+                            </div>
+                            <div class="radioButton">
+                                <label for="Colegio">
+                                    <input 
+                                    type="checkbox" 
+                                    name="meet" 
+                                    id="Colegio" 
+                                    value="Colegio" />    
+                                Colegio</label>
+                            </div>
+                            <div class="radioButton">
+                                <label for="Github">
+                                    <input 
+                                    type="checkbox" 
+                                    name="meet" 
+                                    id="Github" 
+                                    value="Github" />    
+                                En Github</label>
+                            </div>
+
+                    </label>
+
+                    <div class="divButton">       
+                        <button type="submit" class="submit-btn">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="divImg">
+                <img class="imgDesktop" src="../imgs/laptop.jpg" alt="laptop">
+            </div>
+        </main>
+
+        <footer class="footer">
+            <h6>Práctica HTML y CSS</h6>
+            <nav class="imgFooter">
+                <a
+                    href="https://www.linkedin.com/in/mariaangelescordoba"
+                    target="_blank"
+                >
+                    <img class="RRSS" src="../imgs/linkedin.png" />
+                </a>
+                <a href="https://github.com/mangelesc" target="_blank">
+                    <img class="RRSS" src="../imgs/github.png" />
+                </a>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <img class="RRSS" src="../imgs/whatsapp.png" />
+                </a>
+            </nav>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>M Ángeles Córdoba. Portfolio</title>
+        <link rel="stylesheet" href="styles/nav.css" />
+        <link rel="stylesheet" href="styles/index.css" />
+        <link rel="stylesheet" href="styles/footer.css" />
+        <script src="./JS/navbar.js" defer></script>
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div id="menu">
+                <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li>
+                            <a class="menu" href="index.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="menu" href="html/contact.html"
+                                >Contacto</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="menu"
+                                href="https://github.com/mangelesc"
+                                target="_blank"
+                                >Github</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="menu"
+                                href="https://www.linkedin.com/in/mariaangelescordoba/"
+                                target="_blank"
+                                >LinkedIn</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bg" id="menu-bg"></div>
+            <img class="logo" src="imgs/logo.jpg" alt="Logo" />
+        </header>
+        <main>
+            <div>
+                <img class="imgDesktop" src="imgs/header.jpg" alt="desktop">
+            </div>
+            <div class="container">
+                <article class="hola">
+                    <h2 class="tittle">¡Hola!</h2>
+                    <p>Me llamo <b>Mª Ángeles</b>.</p>
+                    <p>
+                        Actualmente estoy cursando el Bootcamp de KeepCoding en
+                        Desarrollo Web
+                        <i>Mujeres en Tech by Glovo</i>, y finalizando el grado
+                        superior de DAW.
+                    </p>
+                    <p>
+                        Antes de empezar en el mundo del desarrollo web, me
+                        dedicaba a la educación; soy profesora de Educación
+                        Primaria, Educación Infantil y de Inglés. Mis años de
+                        experiencia en la educación me han dado el
+                        <b>superpoder</b> de la paciencia, ¡y lo uso mucho
+                        mientras intento descubrir <i>bugs</i> en mis códigos o
+                        trato de centrar una imagen con CSS!
+                    </p>
+                    <p>
+                        Me considero una persona dedicada, con iniciativa y con
+                        muchas ganas de avanzar y aprender desarrollo web. Me
+                        apasiona poder seguir formándome con el fin de superarme
+                        profesional y personalmente, y así poder dar lo mejor de
+                        mí misma.
+                    </p>
+                </article>
+                <img id="imgHola" src="imgs/hola.jpg" alt="imgHola" />
+            </div>
+            <div class="separator">
+                <hr />
+                <span> o </span>
+                <hr />
+            </div>
+            <div class="container-colored">
+                <h2 class="tittle">Mis habilidades</h2>
+                <div class="columns">
+                    <div class="skills">
+                        <h4>HTML</h4>
+                        <div class="progress progress1">
+                            <div class="progress-value val1"></div>
+                        </div>
+                
+                        <h4>CSS</h4>
+                        <div class="progress">
+                            <div class="progress-value val2"></div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <h4>JavaScript</h4>
+                        <div class="progress progress1">
+                            <div class="progress-value val3"></div>
+                        </div>
+
+                        <h4>Python</h4>
+                        <div class="progress">
+                            <div class="progress-value val4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container"></div>
+        </main>
+        <footer class="footer">
+            <h6>Práctica HTML y CSS</h6>
+            <nav class="imgFooter">
+                <a
+                    href="https://www.linkedin.com/in/mariaangelescordoba"
+                    target="_blank"
+                    rel="noopener noreferrer""
+                >
+                    <img class="RRSS" src="imgs/linkedin.png" />
+                </a>
+                <a
+                    href="https://github.com/mangelesc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img class="RRSS" src="imgs/github.png" />
+                </a>
+                <a
+                    href="https://www.whatsapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img class="RRSS" src="imgs/whatsapp.png" />
+                </a>
+            </nav>
+        </footer>
+    </body>
+</html>

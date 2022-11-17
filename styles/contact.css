@@ -1,0 +1,124 @@
+form,
+.section-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.labelSpan {
+    font-weight: 700;
+}
+
+.labelInput {
+    width: 90%;
+    background-color: #9cc4cb52;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14pt;
+    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+}
+
+.labelInput:hover {
+    background-color: #9cc4cb;
+    border: solid 1px #f3f3f4;
+    box-shadow: 0 0 4px #9cc4cb;
+}
+
+.labelInput:focus {
+    background-color: white;
+    border: solid 1px #f3f3f4;
+    box-shadow: 0 0 4px #9cc4cb;
+}
+
+.checkbox-label {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+}
+
+.checkbox-label span {
+    font-weight: 400;
+}
+
+.divButton {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 50px 0px;
+}
+
+.radioButton label {
+    font-size: 14pt;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+.radioButton input {
+    background-color: #9cc4cb;
+}
+
+.submit-btn {
+    justify-self: center;
+    background-color: #e2fadb;
+    max-width: 200px;
+    color: black;
+    font-weight: 500;
+    font-size: 16pt;
+    text-align: center;
+    padding: 15px;
+    border: 15px;
+    border-color: #686d65;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    opacity: 0.75;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .section-inputs {
+        width: 600px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .section-inputs label {
+        max-width: 44.7%;
+    }
+
+    .labelSpan {
+        font-size: 18pt;
+    }
+
+    .submit-btn {
+        max-width: 300px;
+        font-size: 20pt;
+        padding: 25px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+}

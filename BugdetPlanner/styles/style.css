@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5 {
 /* Table section */
 
 #activityTable{
-    width: 280px;
+    width: 300px;
 }
 tbody{
     max-width: 80% !important;

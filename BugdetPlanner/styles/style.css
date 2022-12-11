@@ -10,6 +10,7 @@
 
 h1,h2,h3,h4,h5 {
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 #headerStyle {
@@ -19,7 +20,7 @@ h1,h2,h3,h4,h5 {
     background-color: #203D4D;
 }
 #headerpic {
-    height: 200px;
+    height: 120px;
 }
 
 .container {
@@ -34,10 +35,11 @@ h1,h2,h3,h4,h5 {
 .container2 {
     padding: 10px 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 /* Current balance */
 #currentBalance{
     font-size: 40pt;
@@ -50,29 +52,35 @@ h1,h2,h3,h4,h5 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0px 20px;
+    margin: 10px 20px;
     padding: 20px;
     border-radius: 5px;
-    width: 250px;
+    width: 260px;
+    height: 130px;
     background-color: #ABC6D9;
 }
+
 .divSections h3{
-    font-size: 12pt;
+    font-size: 14pt;
     font-weight: bolder;
     color: white;
 }
 .divSections p{
-    font-size: 30pt;
+    font-size: 24pt;
     margin: 0;
     color: white;
 }
 
+
+
 /* Table section */
 
 #activityTable{
-    width: 500px;
+    width: 280px;
 }
-
+tbody{
+    max-width: 80% !important;
+}
 tr{
     border: 10px solid white !important;
     height: 50px;
@@ -84,7 +92,7 @@ td {
     padding: 20;
 }
 .tableDescript{
-    padding-left: 20px;
+    padding-left: 10px;
     width: 50%;
     
 }
@@ -107,16 +115,18 @@ td {
 
 /* Transactions */
 #transactionButtons {
-    padding: 15px 40px;
+    padding: 15px 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 #transactionButtons button{
-    margin: 0px 20px;
-    padding: 20px;
+    margin: 15px 15px;
+    padding: 25px;
 }
+
+
 
 /* Modal windows */
 .modal-header{
@@ -135,9 +145,10 @@ td {
     color: white;
     background: #3C5E7C;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 20px;
+    padding: 20px 0px 0px 0px; 
 }
 
 .imgFooter {
@@ -146,10 +157,66 @@ td {
 }
 
 .RRSS {
-    margin: 0px 10px;
+    margin: 10px 10px;
     height: 2em;
 }
 
 .footer h6 {
-    font-size: 12pt;
+    font-size: 10pt;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    #headerpic {
+        height: 250px;
+    }
+    .container2 {
+        flex-direction: row;
+        }
+
+    #activityTable{
+        width: 500px;
+    }
+
+    .divSections{
+        flex-direction: column;
+        margin: 0px 20px;
+        width: 250px;
+    }
+    .divSections{
+        margin: 20px 20px;
+        width: 280px;
+        max-width: 320px;
+        height: 150px;
+    }
+
+    .divSections h3{
+        font-size: 12pt;
+    }
+    .divSections p{
+        font-size: 26pt;
+    } 
+
+    #transactionButtons {
+        padding: 15px 40px;
+        flex-direction: row;
+    }
+    #transactionButtons button{
+        margin: 0px 20px;
+        padding: 20px;
+    }
+
+    .footer {
+        flex-direction: row;
+    }
+
+    .RRSS {
+        margin: 0px 10px 10px 20px;
+    }
+
+    .footer h6 {
+        font-size: 12pt;
+    }
 }

@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Arvo", serif;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#headerStyle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #203D4D;
+}
+#headerpic {
+    height: 200px;
+}
+
+.container {
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.container2 {
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* Current balance */
+#currentBalance{
+    font-size: 40pt;
+    font-weight: bolder;
+}
+
+/* income and expences */
+.divSections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    background-color: #ABC6D9;
+}
+.divSections h3{
+    font-size: 12pt;
+    font-weight: bolder;
+    color: white;
+}
+.divSections p{
+    font-size: 30pt;
+    margin: 0;
+    color: white;
+}
+
+/* Table section */
+
+#activityTable{
+    width: 500px;
+}
+
+tr{
+    border: 10px solid white !important;
+    height: 50px;
+    margin: 20px;
+    background-color: #c6d9e9a8;
+}
+
+td {
+    padding: 20;
+}
+.tableDescript{
+    padding-left: 20px;
+    width: 50%;
+    
+}
+.tableAmount{
+    width: 35%;
+    text-align: right;
+}
+.tableDelete{
+    width: 12%;
+    text-align:center;
+    cursor: pointer;
+}
+
+.tableColorIncome{
+    background-color: rgb(73, 179, 73);
+}
+.tableColorExpense{
+    background-color: rgb(221, 92, 92);
+}
+
+/* Transactions */
+#transactionButtons {
+    padding: 15px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#transactionButtons button{
+    margin: 0px 20px;
+    padding: 20px;
+}
+
+/* Modal windows */
+.modal-header{
+    background-color: #ABC6D9;
+}
+
+/* Images*/
+.gifs {
+    margin: 0px 10px;
+    height: 9em;
+}
+
+
+/* Footer styles */
+.footer {
+    color: white;
+    background: #3C5E7C;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.imgFooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.RRSS {
+    margin: 0px 10px;
+    height: 2em;
+}
+
+.footer h6 {
+    font-size: 12pt;
+}

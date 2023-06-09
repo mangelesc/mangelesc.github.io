@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;500&family=Sora:wght@600&display=swap');
+
+:root {
+  --color-home__articles: #FFFFFF;
+  --color-home__aside: #008000;
+  --color-home__body: #F0F0F0;
+  --color-home__principal: #FF993E; 
+  --color-narbar: #C0392B;
+  --color-narbar--hover: #E74C3C;
+  --color-narbar--RRSS: #874000;
+  
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+}
+
+body{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Header styles */
+.header, .footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0px;
+  background-color: var(--color-home__principal);
+  width: 100vw;
+}
+
+.header__logo__img{
+  max-width: 50px;
+}
+
+.header__logo__txt{
+  font-family: 'Sora', sans-serif;
+  padding-left: 15px;
+
+}
+
+/* Navbar styles */
+.navbar{
+  width: 100vw;
+  background-color: var(--color-narbar);
+}
+.navbar__list{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar__list__item{
+  color: white;
+  list-style: none;
+  min-width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
+  transition: background-color 1s linear
+}
+
+.navbar__list__item:hover{
+  background-color: var(--color-narbar--hover);
+  cursor: pointer;
+}
+
+.navbar__list__item > a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar__list__item > a:active {
+    text-decoration: underline;
+}
+
+/* Main Styles */
+.sectionLorem{
+  padding: 0px 25px;
+}
+
+.sectionLorem__article{
+  padding: 15px 0px;
+}
+
+.sectionLorem__article:not(:last-child){
+  border-bottom: 1px solid;
+}
+
+.sectionLorem__article__h2{
+  padding-bottom: 10px;
+}
+
+.sectionLorem__article__text--quote{
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left: 4px solid #D3D3D3;
+}
+
+.aside{
+  display: none;
+}
+
+/* Footer Styles */
+.footer{
+  background-color: var(--color-home__principal);
+}
+
+.navbar--small{
+  width: 75vw;
+  margin-top: 20px;
+}
+
+.navbar--RRSS{
+  width: 37vw;
+  margin-bottom: 20px;
+  background-color: var(--color-narbar--RRSS);
+}
+
+.navbar__list__item--RRSS{
+  min-width: 33%;
+}
+
+/* Tablet version */
+@media screen and (min-width: 500px) {
+  .sectionLorem{
+    padding: 0px 40px;
+  }
+
+  .sectionLorem__article{
+    padding: 40px 0px;
+  }
+
+  /* Aside Styles */
+  .aside{
+    width: 100vw;
+    background-color: var(--color-home__aside);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aside__div{
+    min-height: 200px;
+    min-width: 30vw;
+    margin: 40px;
+    background-color: var(--color-home__principal);
+  }
+}
+
+/* Desktop version */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1em;
+  }
+  /* Header Styles */
+  .header, .footer{
+    flex-direction: row;
+    background-color: var(--color-home__principal);
+  }
+  .header{
+    padding: 0px 7vw;
+    justify-content: space-around;
+  }
+
+  .header > div{
+    padding: 30px;
+  }
+  .header__logo{
+    justify-content: flex-start;
+  }
+
+  /* Navbar styles */
+  .navbar{
+    width: 40vw;
+  }
+
+  /* Main Styles */
+  .main{
+    background-color: var(--color-home__body);
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 60vw;
+    padding: 0px 7vw;
+  }
+
+  /* Article styles */
+
+  /* Aside Styles */
+  .aside{
+    width: 20vw;
+    flex-direction: column;
+    justify-content:flex-start;
+    padding: 40px 30px
+  }
+
+  .aside__div{
+    min-height: 180px;
+    min-width: 20vw;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .sectionLorem{
+    padding: 0px 30px;
+    background-color: var(--color-home__articles);
+  }
+
+  .sectionLorem__article{
+    padding: 30px 0px;
+  }
+  .sectionLorem__article__h2{
+    font-size: 2em;
+  }
+
+  /* Footer Styles */
+  .footer{
+    padding: 0px 7vw;
+    justify-content: space-between;
+  }
+  .navbar--small {
+    width: 20vw;
+    margin: 30px;
+  }
+
+  .navbar--RRSS{
+    width: 12vw;
+    margin: 30px;
+  }
+
+}

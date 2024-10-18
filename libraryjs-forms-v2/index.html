@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPB - Prueba técnica - Ángeles Córdoba</title>
+    <!-- Libreria -->
+    <script defer src="form-library/formLibrary.js"></script>
+    <script defer src="form-library/classes/formField.js"></script>
+    <script defer src="form-library/test/test.js"></script>
+
+    <!-- Estilos y funciones de página -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/functions.js"></script>
+  </head>
+  <body>
+    <header class="background-gradient" id="header">
+      <div class="navbar">
+        <div>
+          <a href="#header">
+            <h1 class="navbar-title">Libreria JS</h1>
+            <span class="navbar-subtitle"> Formulario con campos dinámicos </span>
+          </a>
+        </div>
+        <nav class="navbar-menu">
+          <ul class="navbar-menu-ul">
+            <li class="navbar-menu-ul-li"><a href="#form-section">Crea tu form</a></li>
+            <li class="navbar-menu-ul-li"><a href="#examples-section">Ejemplos</a></li>
+            <li class="navbar-menu-ul-li"><a href="#help-section">Documentación</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div id="form" class="section-div">
+        <h2 class="section-div-title">Genera tu formulario</h2>
+        <p>Completa el formulario de abajo, con la información de los campos que quieres añadir al formulario</p>
+        <p>Al clicar Añadir Campo, se agregará un nuevo campo/input al objeto Form.</p>
+        <p>Al clicar Generar Formulario, se renderiza el formulario con los campos añadidos.</p>
+        <p>Podemos obtener el Objeto del form en la consola de comandos.</p>
+        <p></p>
+
+        <div class="section-div-half-container">
+          <div class="section-div-half">
+            <h2>Añadir un campo al formulario:</h2>
+            <form id="createFieldForm" class="section-div-form">
+              <div>
+                <label for="type">Tipo de Campo:</label>
+                <select id="type" name="type">
+                  <option value="text">Texto</option>
+                  <option value="email">Correo electrónico</option>
+                  <option value="password">Contraseña</option>
+                  <option value="number">Número</option>
+                  <option value="checkbox">Checkbox</option>
+                  <option value="radio">Radio</option>
+                  <option value="submit">Enviar</option>
+                  <option value="reset">Resetear</option>
+                  <option value="button">Botón</option>
+                  <option value="date">Fecha</option>
+                  <option value="file">Archivo</option>
+                  <option value="hidden">Oculto</option>
+                  <option value="range">Rango</option>
+                  <option value="search">Buscar</option>
+                  <option value="tel">Teléfono</option>
+                  <option value="url">URL</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="name">Nombre del Campo:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div>
+                <label for="id">ID del Campo:</label>
+                <input type="text" id="id" name="id" required />
+              </div>
+
+              <div>
+                <label for="placeholder">Placeholder:</label>
+                <input type="text" id="placeholder" name="placeholder" />
+              </div>
+
+              <div>
+                <label for="required">Requerido:</label>
+                <select id="required" name="required">
+                  <option value="true">Sí</option>
+                  <option value="false">No</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="label">Etiqueta:</label>
+                <input type="text" id="label" name="label" required />
+              </div>
+
+              <div>
+                <label for="className">Clase CSS:</label>
+                <input type="text" id="className" name="className" required />
+              </div>
+
+              <div class="form-two-button">
+                <button type="button" id="addFieldToCreateForm">Añadir Campo</button>
+                <button type="button" id="generarForm">Generar Formulario</button>
+              </div>
+            </form>
+          </div>
+          <div class="section-div-half">
+            <h2>Codigo HTML del formulario:</h2>
+            <div>
+              <p id="createFieldForm-htmlcode"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="examples-section" class="section-div">
+        <h2 class="section-div-title">Ejemplos</h2>
+        <p>A continuación, mostramos algunos ejemplo de formularios creados con la librería formLibrary.js</p>
+        <div class="section-div-dark" id="examples-section-addedJs"></div>
+        <div>
+          <p>Los campos han sido generados de forma dinámica, utilizando la función</p>
+          <i>createFormJS(formId, [field1, field2,...], callback)</i>
+          <p>
+            Al clickar el botón de Enviar, la función de <i>callback</i> genera un JSON a partir de los datos
+            introducidos en el formulario.
+          </p>
+          <p>El JSON generado lo podemos ver tanto en la ventana emergente como en la consola de comandos.</p>
+        </div>
+      </div>
+
+      <div id="help-section" class="section-div">
+        <h2 class="section-div-title">Documentación</h2>
+        <div class="section-div-body">
+          <h3>Técnologias utilizadas:</h3>
+          <p>JavaScript Vanilla</p>
+        </div>
+        <div class="section-div-body">
+          <h3>Funcionalidades:</h3>
+          <ul>
+            <li>Librería en JavaScrip para generar un formularios con campos dinámicos.</li>
+            <li>La librería se ejecuta a partir de un objeto/función en un Namespace propio en window.</li>
+            <li>
+              <i>createFormJS(formId, [field1, field2, ...], callback)</i>. Función que genera un formulario con campos
+              dinámicos
+            </li>
+            <li>
+              <i>fieldX</i>. Cada parámetro o argumento field debe ser un objeto con las siguientes opciones: <br />
+              <i
+                >{ <br />
+                type : "text" // String. Tipos de input: text / number / email... <br />
+                name : "phone" // String. Atributo "name" del elemento <br />
+                id : "campo_telefono" // String. Id del elemento: #id <br />
+                required : true // Boolean. Si el campo es requerido para el form: true | false <br />
+                }</i
+              >
+            </li>
+            <li><i>Callback</i>. Función que se ejecutará tras crear el formulario</li>
+            <li><i>Retorno</i>. La función debe retornar un objeto con acceso al elemento formulario generado</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="help-section" class="section-div">
+        <h2 class="section-div-title">Ejemplo y modo de uso</h2>
+        <div class="section-div-body">
+          <h3>Uso de la librería</h3>
+          <ul>
+            <li>
+              Nos aseguramos de tener importada la librería. En este caso, podemos abrir la consola de comandos y
+              ejecutar el código en la misma.
+            </li>
+            <li>
+              Creamos un Array de objetos de la clase FormField (type, name, id, required), cada instancia corresponderá
+              a un input del formulario que vamos a generar.
+              <br />
+              Ej:<br />
+              <i>
+                const fields = [<br />
+                new FormField("text", "user", "user", "username", true, "username", "form-fielf-full"), <br />
+                new FormField("text", "email", "email", "email", true, "email", "form-fielf-full"), <br />
+                new FormField("password", "password1", "password1", "password", true, "Contraseña", "form-fielf-half"),
+                <br />
+                new FormField("checkbox", "terms1", "check1", "", true, "acepto", "form-fielf-half"), <br />
+                new FormField("submit", "submit1", "submit1", "", false, "Enviar", "form-fielf-half") <br />
+              </i>
+              ];<br />
+            </li>
+
+            <li>
+              Llamamos a la función createFormJS <br />
+              Ej:
+              <i>
+                const formObject = FormLibrary.createFormJS(fields2, (form) => {<br />
+                document.body.appendChild(form); });
+              </i>
+            </li>
+            <li>
+              La función nos devolverá un objeto con el formulario que acabamos de crear, tras ejecutar la función de
+              callback.
+            </li>
+          </ul>
+          <h3>Extra:</h3>
+          <ul>
+            <li>
+              La librería cuenta con una función <i>callbackFormJS = (formJS, htmlElementId)</i>, que podemos usar como
+              función que se ejecutará tras crear el formulario en <i>createFormJS</i> <br />
+              Su funcionalidad es imprimir el formulario dentro del elemento html enviado cuyo ID pasamos por parámetro,
+              y transformar a JSON los datos enviados en el formulario.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="help-section" class="section-div">
+        <h2 class="section-div-title">Documentación</h2>
+        <div class="section-div-body">
+          <h3>Espacio para Test de código</h3>
+          <p>ID de elemento HTML: <i>#formTest</i></p>
+          <div id="formTest"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Prueba técnica realizada por:</p>
+      <p>Ángeles Córdoba</p>
+    </footer>
+  </body>
+</html>

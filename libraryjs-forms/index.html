@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPB - Prueba técnica - Ángeles Córdoba</title>
+    <!-- Libreria -->
+    <script defer src="form-library/formLibrary.js"></script>
+    <script defer src="form-library/classes/formField.js"></script>
+    <script defer src="form-library/test/test.js"></script>
+
+    <!-- Estilos y funciones de página -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <script defer src="js/functions.js"></script> -->
+  </head>
+  <body>
+    <header class="background-gradient" id="header">
+      <div class="navbar">
+        <div>
+          <a href="#header">
+            <h1 class="navbar-title">Libreria JS</h1>
+            <span class="navbar-subtitle"> Formulario con campos dinámicos </span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div id="help-section" class="section-div">
+        <h2 class="section-div-title">Documentación</h2>
+        <div class="section-div-body">
+          <h3>Técnologias utilizadas:</h3>
+          <p>JavaScript Vanilla</p>
+        </div>
+        <div class="section-div-body">
+          <h3>Funcionalidades:</h3>
+          <ul>
+            <li>Librería en JavaScrip para generar un formularios con campos dinámicos.</li>
+            <li>La librería se ejecuta a partir de un objeto/función en un Namespace propio en window.</li>
+            <li>
+              <i>createFormJS(formId, [field1, field2, ...], callback)</i>. Función que genera un formulario con campos
+              dinámicos
+            </li>
+            <li>
+              <i>fieldX</i>. Cada parámetro o argumento field debe ser un objeto con las siguientes opciones: <br />
+              <i
+                >{ <br />
+                type : "text" // String. Tipos de input: text / number / email... <br />
+                name : "phone" // String. Atributo "name" del elemento <br />
+                id : "campo_telefono" // String. Id del elemento: #id <br />
+                required : true // Boolean. Si el campo es requerido para el form: true | false <br />
+                }</i
+              >
+            </li>
+            <li><i>Callback</i>. Función que se ejecutará tras crear el formulario</li>
+            <li><i>Retorno</i>. La función debe retornar un objeto con acceso al elemento formulario generado</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="help-section" class="section-div">
+        <h2 class="section-div-title">Ejemplo y modo de uso</h2>
+        <div class="section-div-body">
+          <h3>Uso de la librería</h3>
+          <ul>
+            <li>
+              Nos aseguramos de tener importada la librería. En este caso, podemos abrir la consola de comandos y
+              ejecutar el código en la misma.
+            </li>
+            <li>
+              Creamos un Array de objetos de la clase FormField (type, name, id, required), cada instancia corresponderá
+              a un input del formulario que vamos a generar.
+              <br />
+              Ej:<br />
+              <i>
+                const fields = [<br />
+                new FormField("text", "username", "username", true),<br />
+                new FormField("email", "email", "email", false),<br />
+                new FormField("password", "password", "password", true),<br />
+                new FormField("button", "buton", "buton", false),<br
+              /></i>
+              ];<br />
+            </li>
+
+            <li>
+              Llamamos a la función createFormJS <br />
+              Ej:
+              <i>
+                const formObject = FormLibrary.createFormJS(fields2, (form) => {<br />
+                document.body.appendChild(form); });
+              </i>
+            </li>
+            <li>
+              La función nos devolverá un objeto con el formulario que acabamos de crear, tras ejecutar la función de
+              callback.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="help-section" class="section-div">
+        <h2 class="section-div-title">Espacio de pruebas</h2>
+        <div class="section-div-body">
+          <h3>Espacio para Test de código</h3>
+          <p>ID de elemento HTML: <i>#formTest</i></p>
+          <div id="formTest"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Prueba técnica realizada por:</p>
+      <p>Ángeles Córdoba</p>
+    </footer>
+  </body>
+</html>

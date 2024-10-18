@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Afacad Flux", sans-serif;
+  font-weight: 400;
+  font-size: 18pt;
+}
+
+body {
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  align-content: center;
+}
+
+.background-gradient {
+  background: rgb(43, 91, 211);
+  background: linear-gradient(90deg, rgba(43, 91, 211, 1) 0%, rgba(115, 59, 184, 1) 48%, rgba(161, 40, 168, 1) 100%);
+}
+
+/* Header */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 15%;
+}
+.navbar-title {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 750;
+  line-height: 60px;
+}
+
+.navbar-subtitle {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 60px;
+}
+
+.navbar-menu {
+  color: #ffffff;
+}
+
+.navbar-menu-ul {
+  display: flex;
+  list-style-type: none;
+}
+.navbar-menu-ul-li {
+  margin: 0 3em;
+}
+
+.navbar-menu-ul-li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.navbar-menu-ul-li a:hover {
+  color: #7b818a;
+}
+
+/* Main */
+a {
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 15%;
+}
+.section-div {
+  margin: 1.2em 0;
+}
+
+.section-div-dark {
+  background-color: #a3afea;
+  /* margin: 1.2em 1em; */
+  padding: 1.2em 1em;
+}
+
+.section-div-title {
+  font-size: 28pt;
+  font-weight: 600;
+  color: #2b5cd3;
+}
+
+.section-div-body h3 {
+  font-weight: 700;
+  padding: 0.8em 0 0.3em 0;
+}
+
+.section-div-body ul {
+  padding: 0em 0 0.3em 1em;
+}
+
+.section-div-half-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-div-half {
+  min-width: 45%;
+  padding: 0.5em 0.7em 0.5em 0.5em;
+}
+.section-div-half h2 {
+  font-size: 26pt;
+  padding: 0 0 0.7em 0;
+}
+.section-div-form {
+  display: flex;
+  flex-direction: column;
+}
+.section-div-form div {
+  display: flex;
+  flex-direction: column;
+  padding: 0.1em;
+}
+
+.form-two-button button {
+  margin: 0.2em;
+}
+
+#createFieldForm-htmlcode {
+  background-color: #7b818a;
+  min-width: 100%;
+  min-height: 90%;
+  padding: 0.1em;
+}
+
+/* Footer */
+.footer {
+  background-color: #2b5cd3;
+  padding: 2em 15%;
+}
+
+.footer p {
+  color: #ffffff;
+  padding: 0.2em 0;
+}

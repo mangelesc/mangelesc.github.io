@@ -1,0 +1,321 @@
+@font-face {
+  font-family: "Esade-Regular";
+  src: url("../fonts/Esade-Regular.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Esade-Bold";
+  src: url("../fonts/Esade-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mabry-Light";
+  src: url("../fonts/Mabry-Light-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mabry-Regular";
+  src: url("../fonts/Mabry-Regular-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mabry-Bold";
+  src: url("../fonts/Mabry-Bold-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Main colors */
+  --color-primary: #000b3d;
+  --color-secondary: #00a380;
+  --color-secondary-light: #33be9f;
+  --color-action: #f1595c;
+
+  /* Text */
+  --text-dark: #555555;
+  --text-light: #ffffff;
+
+  /* Additional color */
+  --background-light-grey: #eaeaea;
+  --background-white: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Esade-Regular", sans-serif;
+  line-height: 1;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Mabry-Regular", sans-serif;
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 300;
+  background-color: #f5f5f5;
+  line-height: 26px;
+}
+
+/* Text */
+.text-dark {
+  color: var(--text-dark);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+/* Titles H */
+.title-h2,
+h2 {
+  font-size: 2.1875rem;
+  margin-bottom: 1.5rem;
+}
+
+.title-h3 {
+  font-weight: 400;
+  font-size: 2.7rem;
+}
+
+/* Components */
+.component {
+  padding: 7rem 0rem 7rem 0rem;
+  margin-top: 2rem;
+}
+
+.component-primaryColor {
+  background-color: var(--color-primary);
+}
+
+.component-secondaryColor {
+  background-color: var(--color-secondary);
+}
+
+.component-white {
+  background-color: var(--background-white);
+}
+
+.component-lightGrey {
+  background-color: var(--background-light-grey);
+}
+
+.component-inner {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.component-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.component-content-smallTextLeft {
+  width: 25%;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-family: "Mabry-Light", sans-serif;
+  padding: 25px 0px;
+}
+
+.component-content-rightSectionBig {
+  width: 75%;
+  padding-left: 50px;
+}
+
+/* Square box */
+.square-container {
+  height: 6rem;
+}
+
+.square {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: -250px;
+  left: 5.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.square-text {
+  padding: 2rem;
+  font-size: 2.5rem;
+  line-height: 1.12;
+}
+
+/* Carousel */
+.contenedorSlider {
+  width: 90%;
+}
+
+.container-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel-item-card {
+  background-color: var(--background-white);
+  border-radius: 25px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 0px 1.5rem;
+  flex: 0 0 calc(33.33% - 20px);
+}
+
+.carousel-item-card h3 {
+  margin: 0px;
+  padding: 25px 0px;
+  border-bottom: 1px solid #eaeaea;
+  font-family: "Mabry-Bold", sans-serif;
+  font-weight: bold;
+}
+
+.carousel-item-card p {
+  line-height: 1.2rem;
+  font-family: "Mabry-Regular", sans-serif;
+}
+
+.carousel-item-card-link {
+  color: var(--text-light);
+}
+.carousel-item-card-link:hover {
+  /* transform: scale(1.5); */
+  transform: translateX(10px);
+  cursor: pointer;
+}
+
+.carousel-item-card-link a {
+  color: var(--color-action);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.carousel-item-card-link-text {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.carousel-item-card-link-text:hover,
+.carousel-item-card-link a:hover {
+  transform: translateX(10px);
+}
+
+.slick-button {
+  color: white;
+  font-size: 2.5rem;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
+  font-weight: bold;
+  font-family: "Mabry-Regular", sans-serif;
+}
+
+.slick-button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+}
+
+/* MediaQuery - Estilos Responsive */
+
+@media (max-width: 1024px) {
+  /* Tablet */
+  .component-inner {
+    width: 90%;
+  }
+  .square {
+    top: -250px;
+  }
+
+  .component-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .square-container {
+    height: 4rem;
+  }
+
+  .component-content-smallTextLeft {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .component-content-rightSectionBig {
+    padding-left: 0px;
+  }
+
+  .carousel-item-card {
+    min-height: 400px;
+  }
+  .carousel-item-card h3 {
+    padding: 15px 0px;
+  }
+  .slick-dots {
+    bottom: -70px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .square-container {
+    display: flex;
+    height: 1rem;
+  }
+
+  .square {
+    width: 200px;
+    height: 200px;
+    top: -200px;
+    left: 1.75rem;
+  }
+
+  .square-text {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  .component-content-smallTextLeft {
+    width: 90%;
+  }
+
+  .carousel-item-card {
+    min-height: 400px;
+    padding: 25px;
+    margin: 0px 0.1rem;
+  }
+}
